@@ -1,29 +1,176 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Open Music Player — поддержка и конфиденциальность</title>
+  <meta name="description" content="Open Music Player is a local audio player for iPhone and iPad. Add only the files and folders you choose, with no ads or subscription.">
+  <meta name="theme-color" content="#07130f">
+  <meta name="apple-itunes-app" content="app-id=6808717551">
+  <link rel="canonical" href="https://albertkytytzov-cyber.github.io/open-music-player-support/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Open Music Player — your music, your folders">
+  <meta property="og:description" content="A local music player for iPhone and iPad. One-time purchase, no ads, no subscription.">
+  <meta property="og:url" content="https://albertkytytzov-cyber.github.io/open-music-player-support/">
+  <meta property="og:image" content="https://albertkytytzov-cyber.github.io/open-music-player-support/app-icon.png">
+  <title>Open Music Player — Local audio for iPhone and iPad</title>
   <style>
-    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { margin: 0; background: #eef5f1; color: #121716; }
-    main { width: min(760px, calc(100% - 32px)); margin: 48px auto; }
-    section { background: #fff; border: 1px solid #dbe7e0; border-radius: 24px; padding: 28px; box-shadow: 0 18px 50px rgba(18, 23, 22, .08); }
-    h1 { margin-top: 0; }
-    a { color: #078e55; font-weight: 700; }
-    nav { display: grid; gap: 12px; margin-top: 24px; }
+    :root {
+      color-scheme: dark;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      --ink: #f3fff9;
+      --muted: #a8bdb3;
+      --panel: rgba(17, 39, 31, .72);
+      --line: rgba(179, 255, 218, .16);
+      --accent: #7ef2bd;
+      --accent-ink: #032d1d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 14% 8%, rgba(37, 181, 126, .32), transparent 30rem),
+        radial-gradient(circle at 88% 24%, rgba(65, 129, 255, .18), transparent 28rem),
+        #07130f;
+      color: var(--ink);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 760; text-decoration: none; }
+    .brand img { width: 42px; height: 42px; border-radius: 11px; box-shadow: 0 8px 28px rgba(0, 0, 0, .28); }
+    nav { display: flex; flex-wrap: wrap; gap: 20px; }
+    nav a { color: var(--muted); font-size: .94rem; font-weight: 650; text-decoration: none; }
+    nav a:hover, nav a:focus-visible { color: var(--ink); }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      align-items: center;
+      gap: clamp(42px, 8vw, 100px);
+      padding: 76px 0 88px;
+    }
+    .eyebrow { color: var(--accent); font-size: .8rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { max-width: 780px; margin: 18px 0 22px; font-size: clamp(3rem, 7.8vw, 6.7rem); line-height: .94; letter-spacing: -.066em; }
+    .lead { max-width: 680px; margin: 0; color: #c6d8cf; font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.62; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 34px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 15px;
+      background: var(--accent);
+      color: var(--accent-ink);
+      font-weight: 820;
+      text-decoration: none;
+      box-shadow: 0 16px 42px rgba(45, 215, 148, .22);
+    }
+    .button:hover, .button:focus-visible { background: #a2ffd7; transform: translateY(-1px); }
+    .price { color: var(--muted); font-size: .92rem; line-height: 1.4; }
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      background: linear-gradient(150deg, rgba(31, 69, 55, .9), rgba(8, 25, 19, .84));
+      box-shadow: 0 34px 90px rgba(0, 0, 0, .34);
+      overflow: hidden;
+    }
+    .hero-card::after { content: ""; position: absolute; width: 190px; height: 190px; right: -80px; bottom: -100px; border-radius: 50%; background: rgba(126, 242, 189, .17); filter: blur(5px); }
+    .app-icon { display: block; width: min(220px, 72%); margin: 8px auto 30px; border-radius: 27%; box-shadow: 0 28px 55px rgba(0, 0, 0, .32); }
+    .facts { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+    .facts li { display: flex; gap: 10px; color: #d7ebe1; line-height: 1.45; }
+    .facts li::before { content: "✓"; color: var(--accent); font-weight: 900; }
+    .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--line); }
+    .trust div { padding: 22px; background: rgba(9, 28, 21, .88); text-align: center; font-weight: 760; }
+    section { padding: 92px 0; }
+    .section-copy { max-width: 720px; margin-bottom: 34px; }
+    h2 { margin: 0 0 14px; font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.045em; }
+    .section-copy p, .note p { color: var(--muted); line-height: 1.65; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .feature { min-height: 210px; padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); }
+    .feature span { color: var(--accent); font-size: .78rem; font-weight: 820; letter-spacing: .1em; text-transform: uppercase; }
+    .feature h3 { margin: 14px 0 10px; font-size: 1.38rem; }
+    .feature p { margin: 0; color: var(--muted); line-height: 1.62; }
+    .note { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(120deg, rgba(34, 93, 70, .58), rgba(21, 46, 78, .38)); }
+    .note h2 { font-size: clamp(1.65rem, 3vw, 2.5rem); }
+    .note p { margin-bottom: 0; }
+    footer { display: flex; justify-content: space-between; gap: 28px; padding: 42px 0 54px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    footer div { display: flex; flex-wrap: wrap; gap: 18px; }
+    footer a { color: #c8ded3; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 48px; }
+      .hero-card { max-width: 440px; }
+      .trust, .grid { grid-template-columns: 1fr; }
+      .note { grid-template-columns: 1fr; }
+      footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transform: none !important; } }
   </style>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Open Music Player","operatingSystem":"iOS 17, iPadOS 17","applicationCategory":"MusicApplication","offers":{"@type":"Offer","price":"0.99","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/app/id6808717551","description":"A local audio player for iPhone and iPad that imports only the files and folders you choose."}
+  </script>
 </head>
 <body>
-  <main>
-    <section>
-      <h1>Open Music Player</h1>
-      <p>Официальные материалы поддержки приложения.</p>
-      <nav>
-        <a href="support.html">Поддержка</a>
-        <a href="privacy.html">Политика конфиденциальности</a>
-      </nav>
-    </section>
-  </main>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./" aria-label="Open Music Player home"><img src="app-icon.png" alt=""><span>Open Music Player</span></a>
+      <nav aria-label="Main navigation"><a href="#features">Features</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Version 1.2.0 · iPhone and iPad</div>
+          <h1>Your music.<br>Your folders.<br>No subscription.</h1>
+          <p class="lead">Open Music Player is a focused player for your own audio library. Add only the files and folders you choose — the app does not scan your entire device.</p>
+          <div class="actions">
+            <a class="button" href="https://apps.apple.com/app/id6808717551">View on the App Store</a>
+            <span class="price">$0.99 in the US · local prices vary<br>Requires iOS or iPadOS 17 or later</span>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="App highlights">
+          <img class="app-icon" src="app-icon.png" alt="Open Music Player app icon">
+          <ul class="facts">
+            <li>Selected files and folders</li>
+            <li>Playlists, queue and smart collections</li>
+            <li>Equalizer, sleep timer and Lock Screen controls</li>
+            <li>Song identification from the microphone or a file</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="trust" aria-label="Purchase and account information">
+        <div>No ads</div><div>No required account</div><div>One-time purchase</div>
+      </div>
+
+      <section id="features">
+        <div class="section-copy">
+          <h2>Built around the library you already own.</h2>
+          <p>Bring your own audio files. Open Music Player keeps the core experience focused on local playback while giving you the controls expected from a full music library.</p>
+        </div>
+        <div class="grid">
+          <article class="feature"><span>Control</span><h3>Choose what gets added</h3><p>Import individual audio files or selected folders, then refresh a connected folder when its contents change.</p></article>
+          <article class="feature"><span>Library</span><h3>Organize without a catalog</h3><p>Browse songs, albums and artists, build playlists, and use smart collections based on your own listening.</p></article>
+          <article class="feature"><span>Playback</span><h3>Keep listening anywhere</h3><p>Manage the queue, shuffle and repeat, use the equalizer or sleep timer, and control playback from the Lock Screen.</p></article>
+          <article class="feature"><span>Identification</span><h3>Recognize a song</h3><p>Identify nearby music through the microphone or analyze a selected audio file. Identification requires an internet connection.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <div class="note">
+          <div><h2>Nine interface languages.</h2><p>English, Russian, Bulgarian, Spanish, German, Italian, French, Japanese and Simplified Chinese. The app follows a supported device language automatically, with manual selection available in Settings.</p></div>
+          <a class="button" href="https://apps.apple.com/app/id6808717551">Get Open Music Player</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Performarc · Open Music Player</span>
+      <div><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="mailto:support-openmusic@performarc.app">Email support</a></div>
+    </footer>
+  </div>
 </body>
 </html>
