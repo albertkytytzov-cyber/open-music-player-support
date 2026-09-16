@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Open Music Player social card</title>
+  <style>
+    * { box-sizing: border-box; }
+    a[href^="https://vk.com/music"] { display: none !important; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 330px;
+      gap: 74px;
+      align-items: center;
+      padding: 70px 78px;
+      background:
+        radial-gradient(circle at 12% 0, rgba(48, 213, 153, .35), transparent 440px),
+        radial-gradient(circle at 95% 90%, rgba(70, 126, 255, .25), transparent 420px),
+        #07130f;
+      color: #f5fff9;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    }
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border: 1px solid rgba(179, 255, 218, .15);
+      border-radius: 34px;
+      pointer-events: none;
+    }
+    .brand { display: flex; align-items: center; gap: 18px; margin-bottom: 44px; font-size: 26px; font-weight: 760; }
+    .brand img { width: 68px; height: 68px; border-radius: 18px; box-shadow: 0 14px 32px rgba(0,0,0,.28); }
+    h1 { margin: 0; max-width: 710px; font-size: 69px; line-height: .98; letter-spacing: -.052em; }
+    p { margin: 28px 0 0; max-width: 680px; color: #c7dcd1; font-size: 25px; line-height: 1.42; }
+    .badges { display: flex; gap: 12px; margin-top: 34px; }
+    .badge { padding: 11px 16px; border: 1px solid rgba(179,255,218,.2); border-radius: 999px; background: rgba(11,35,26,.72); color: #a8ffd4; font-size: 17px; font-weight: 720; }
+    .icon-wrap { position: relative; display: grid; place-items: center; width: 310px; height: 310px; border: 1px solid rgba(179,255,218,.2); border-radius: 70px; background: linear-gradient(145deg, rgba(35,82,62,.9), rgba(10,28,21,.86)); box-shadow: 0 34px 90px rgba(0,0,0,.34); }
+    .icon-wrap::after { content: ""; position: absolute; width: 150px; height: 150px; right: -28px; bottom: -42px; border-radius: 50%; background: rgba(126,242,189,.19); filter: blur(5px); }
+    .icon-wrap img { width: 225px; height: 225px; border-radius: 27%; box-shadow: 0 28px 58px rgba(0,0,0,.34); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand"><img src="app-icon.png" alt=""><span>Open Music Player</span></div>
+    <h1>Your music.<br>Your folders.<br>No subscription.</h1>
+    <p>A focused local audio player for iPhone and iPad.</p>
+    <div class="badges"><span class="badge">No ads</span><span class="badge">One-time purchase</span><span class="badge">9 languages</span></div>
+  </main>
+  <div class="icon-wrap"><img src="app-icon.png" alt="Open Music Player app icon"></div>
+</body>
+</html>
