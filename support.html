@@ -1,35 +1,96 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Поддержка — Open Music Player</title>
-  <style>
-    :root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-    body { margin: 0; background: #eef5f1; color: #121716; line-height: 1.6; }
-    main { width: min(760px, calc(100% - 32px)); margin: 40px auto; background: #fff; border: 1px solid #dbe7e0; border-radius: 24px; padding: 28px; }
-    h1, h2 { line-height: 1.2; } a { color: #078e55; font-weight: 700; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help, troubleshooting and contact information for Open Music Player.">
+  <meta name="theme-color" content="#07120e">
+  <link rel="canonical" href="https://openmusic.performarc.app/support.html">
+  <link rel="icon" type="image/png" href="app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="pages.css">
+  <title>Support — Open Music Player</title>
 </head>
-<body>
-<main>
-  <h1>Поддержка Open Music Player</h1>
-  <p>Open Music Player работает на iPhone и iPad с iOS/iPadOS 17 или новее, а также на совместимых Apple Silicon Mac.</p>
+<body class="page-body">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="page-header">
+    <div class="shell header-inner">
+      <a class="brand page-nav-home" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a>
+      <nav aria-label="Primary navigation"><a href="./#features">Features</a><a href="news/">News</a><a href="press.html">Press kit</a><a href="privacy.html">Privacy</a></nav>
+      <a class="header-cta" href="https://apps.apple.com/app/id6808717551">App Store <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
 
-  <h2>Как добавить музыку</h2>
-  <p>Откройте «Настройки» и выберите «Добавить файлы» или «Добавить папку». Приложение добавит музыку только из выбранного места. Для поиска новых и удалённых файлов используйте обновление подключённой папки.</p>
+  <main class="page-main" id="main">
+    <div class="shell">
+      <div class="page-intro">
+        <p class="kicker">Help center</p>
+        <h1>Support for your music.</h1>
+        <p>Quick answers for adding files, managing your library, playback and song identification. Open Music Player 1.2.0 supports iPhone and iPad with iOS or iPadOS 17 or later.</p>
+        <div class="page-meta"><span>Current version 1.2.0</span><a href="support-ru.html" lang="ru">Русская версия</a></div>
+      </div>
 
-  <h2>Как очистить медиатеку</h2>
-  <p>В «Настройках» нажмите «Очистить медиатеку» и подтвердите действие. Исходные MP3 и другие аудиофайлы останутся на устройстве.</p>
+      <div class="article-layout">
+        <article class="article">
+          <section id="add-music">
+            <h2>Add music</h2>
+            <p>Open <strong>Settings</strong>, then choose <strong>Add Files</strong> or <strong>Add Folder</strong>. Open Music Player indexes only the files and folders you explicitly select; it does not scan the whole device.</p>
+            <p>When the contents of a connected folder change, use its refresh action. Disconnecting a folder removes its entries from the app without deleting the original audio.</p>
+          </section>
 
-  <h2>Распознавание не работает</h2>
-  <p>Проверьте интернет-соединение и разрешение микрофона в системных настройках. Микрофон включается только после нажатия кнопки распознавания. Можно также выбрать «Распознать аудиофайл».</p>
+          <section id="clear-library">
+            <h2>Clear the library safely</h2>
+            <p>In <strong>Settings</strong>, select <strong>Clear Library</strong> and confirm. This clears the app’s catalog, related cached artwork and local track references. Your source audio files remain where you stored them.</p>
+          </section>
 
-  <h2>Связаться с поддержкой</h2>
-  <p>Open Music Support: <a href="mailto:support-openmusic@performarc.app">support-openmusic@performarc.app</a></p>
-  <p>Также можно <a href="https://github.com/albertkytytzov-cyber/open-music-player-support/issues/new">создать обращение в GitHub Issues</a>.</p>
+          <section id="playback">
+            <h2>Playback troubleshooting</h2>
+            <ul>
+              <li>Confirm that the source file is still available through Files and that access to its folder has not been revoked.</li>
+              <li>Try the track with ReplayGain, gapless playback and crossfade turned off. These options require compatible local files.</li>
+              <li>For background playback, start a track before locking the device. Title, artist, artwork, progress and controls should appear on the Lock Screen.</li>
+              <li>The queue wraps from the last track back to the first. Check repeat and shuffle if the order is unexpected.</li>
+            </ul>
+          </section>
 
-  <p><a href="privacy.html">Политика конфиденциальности</a></p>
-</main>
+          <section id="recognition">
+            <h2>Song identification</h2>
+            <p>Identification requires an internet connection. For nearby music, verify microphone permission in system settings; the microphone starts only after you tap the identification button. You can also choose <strong>Identify Audio File</strong> and select a file through the system picker.</p>
+            <p>A “no match” result does not necessarily indicate an app error. Try a clear section of the track with less background noise.</p>
+          </section>
+
+          <section id="feedback">
+            <h2>Report a problem</h2>
+            <p>Open <strong>Settings → Report a Problem</strong>. Select a category, describe what you did, what you expected and what happened. A reply email is optional.</p>
+            <p>The form sends the message you enter together with limited app and device information. It does not automatically attach music, library contents, microphone recordings or log files. If there is no connection, the report can remain in the private on-device queue for up to seven days.</p>
+            <div class="callout"><p><strong>Please do not include passwords, payment details, private audio or information that is not needed to understand the issue.</strong></p></div>
+          </section>
+
+          <section id="diagnostics">
+            <h2>Optional diagnostics</h2>
+            <p>Automatic diagnostics are disabled by default and require a separate opt-in in Settings. Turning them off stops new automatic reports and removes pending automatic reports from the device. Reports exclude audio, song names, file paths and library contents. Full details are in the <a href="privacy.html">privacy policy</a>.</p>
+          </section>
+
+          <div class="contact-panel" id="contact">
+            <div><h2>Still need help?</h2><p>Send a private message to Open Music Support. We normally need the app version, device model and a short sequence that reproduces the issue.</p></div>
+            <a class="button button-primary" href="mailto:support-openmusic@performarc.app">Email support</a>
+          </div>
+        </article>
+
+        <aside class="article-aside" aria-label="On this page">
+          <strong>On this page</strong>
+          <a href="#add-music">Add music</a>
+          <a href="#clear-library">Clear the library</a>
+          <a href="#playback">Playback</a>
+          <a href="#recognition">Identification</a>
+          <a href="#feedback">Report a problem</a>
+          <a href="#diagnostics">Diagnostics</a>
+          <a href="#contact">Contact support</a>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="shell footer-inner"><a class="brand footer-brand" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a><p>Local music for iPhone and iPad.<br>Made by Performarc.</p><div class="footer-links"><a href="news/">News</a><a href="press.html">Press kit</a><a href="privacy.html">Privacy</a><a href="mailto:support-openmusic@performarc.app">Email support</a></div><small>© 2026 Performarc</small></div></footer>
 </body>
 </html>

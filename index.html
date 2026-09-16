@@ -2,181 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Open Music Player is a local audio player for iPhone and iPad. Add only the files and folders you choose, with no ads or subscription.">
-  <meta name="theme-color" content="#07130f">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Open Music Player is a local audio player for iPhone and iPad. Add only the files and folders you choose — no ads and no subscription.">
+  <meta name="theme-color" content="#07120e">
   <meta name="apple-itunes-app" content="app-id=6808717551">
-  <link rel="icon" type="image/png" href="app-icon.png">
-  <link rel="apple-touch-icon" href="app-icon.png">
-  <link rel="canonical" href="https://albertkytytzov-cyber.github.io/open-music-player-support/">
+  <link rel="canonical" href="https://openmusic.performarc.app/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Open Music Player — your music, your folders">
-  <meta property="og:description" content="A local music player for iPhone and iPad. One-time purchase, no ads, no subscription.">
-  <meta property="og:url" content="https://albertkytytzov-cyber.github.io/open-music-player-support/">
-  <meta property="og:image" content="https://albertkytytzov-cyber.github.io/open-music-player-support/social-card.png">
+  <meta property="og:title" content="Open Music Player — Your music. Your way.">
+  <meta property="og:description" content="A focused local audio player for iPhone and iPad. One-time purchase, no ads, no subscription.">
+  <meta property="og:url" content="https://openmusic.performarc.app/">
+  <meta property="og:image" content="https://openmusic.performarc.app/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Open Music Player — your music, your folders, no subscription">
   <meta name="twitter:card" content="summary_large_image">
   <title>Open Music Player — Local audio for iPhone and iPad</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-      --ink: #f3fff9;
-      --muted: #a8bdb3;
-      --panel: rgba(17, 39, 31, .72);
-      --line: rgba(179, 255, 218, .16);
-      --accent: #7ef2bd;
-      --accent-ink: #032d1d;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 14% 8%, rgba(37, 181, 126, .32), transparent 30rem),
-        radial-gradient(circle at 88% 24%, rgba(65, 129, 255, .18), transparent 28rem),
-        #07130f;
-      color: var(--ink);
-    }
-    a { color: inherit; }
-    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
-    header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 760; text-decoration: none; }
-    .brand img { width: 42px; height: 42px; border-radius: 11px; box-shadow: 0 8px 28px rgba(0, 0, 0, .28); }
-    nav { display: flex; flex-wrap: wrap; gap: 20px; }
-    nav a { color: var(--muted); font-size: .94rem; font-weight: 650; text-decoration: none; }
-    nav a:hover, nav a:focus-visible { color: var(--ink); }
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
-      align-items: center;
-      gap: clamp(42px, 8vw, 100px);
-      padding: 76px 0 88px;
-    }
-    .eyebrow { color: var(--accent); font-size: .8rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
-    h1 { max-width: 780px; margin: 18px 0 22px; font-size: clamp(3rem, 7.8vw, 6.7rem); line-height: .94; letter-spacing: -.066em; }
-    .lead { max-width: 680px; margin: 0; color: #c6d8cf; font-size: clamp(1.08rem, 2vw, 1.34rem); line-height: 1.62; }
-    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 34px; }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 52px;
-      padding: 0 22px;
-      border-radius: 15px;
-      background: var(--accent);
-      color: var(--accent-ink);
-      font-weight: 820;
-      text-decoration: none;
-      box-shadow: 0 16px 42px rgba(45, 215, 148, .22);
-    }
-    .button:hover, .button:focus-visible { background: #a2ffd7; transform: translateY(-1px); }
-    .price { color: var(--muted); font-size: .92rem; line-height: 1.4; }
-    .hero-card {
-      position: relative;
-      padding: 28px;
-      border: 1px solid var(--line);
-      border-radius: 32px;
-      background: linear-gradient(150deg, rgba(31, 69, 55, .9), rgba(8, 25, 19, .84));
-      box-shadow: 0 34px 90px rgba(0, 0, 0, .34);
-      overflow: hidden;
-    }
-    .hero-card::after { content: ""; position: absolute; width: 190px; height: 190px; right: -80px; bottom: -100px; border-radius: 50%; background: rgba(126, 242, 189, .17); filter: blur(5px); }
-    .app-icon { display: block; width: min(220px, 72%); margin: 8px auto 30px; border-radius: 27%; box-shadow: 0 28px 55px rgba(0, 0, 0, .32); }
-    .facts { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-    .facts li { display: flex; gap: 10px; color: #d7ebe1; line-height: 1.45; }
-    .facts li::before { content: "✓"; color: var(--accent); font-weight: 900; }
-    .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--line); }
-    .trust div { padding: 22px; background: rgba(9, 28, 21, .88); text-align: center; font-weight: 760; }
-    section { padding: 92px 0; }
-    .section-copy { max-width: 720px; margin-bottom: 34px; }
-    h2 { margin: 0 0 14px; font-size: clamp(2rem, 4vw, 3.6rem); letter-spacing: -.045em; }
-    .section-copy p, .note p { color: var(--muted); line-height: 1.65; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .feature { min-height: 210px; padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: var(--panel); }
-    .feature span { color: var(--accent); font-size: .78rem; font-weight: 820; letter-spacing: .1em; text-transform: uppercase; }
-    .feature h3 { margin: 14px 0 10px; font-size: 1.38rem; }
-    .feature p { margin: 0; color: var(--muted); line-height: 1.62; }
-    .note { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(120deg, rgba(34, 93, 70, .58), rgba(21, 46, 78, .38)); }
-    .note h2 { font-size: clamp(1.65rem, 3vw, 2.5rem); }
-    .note p { margin-bottom: 0; }
-    footer { display: flex; justify-content: space-between; gap: 28px; padding: 42px 0 54px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
-    footer div { display: flex; flex-wrap: wrap; gap: 18px; }
-    footer a { color: #c8ded3; }
-    @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; padding-top: 48px; }
-      .hero-card { max-width: 440px; }
-      .trust, .grid { grid-template-columns: 1fr; }
-      .note { grid-template-columns: 1fr; }
-      footer { flex-direction: column; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transform: none !important; } }
-  </style>
+  <link rel="icon" type="image/png" href="app-icon.png">
+  <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Open Music Player","operatingSystem":"iOS 17, iPadOS 17","applicationCategory":"MusicApplication","offers":{"@type":"Offer","price":"0.99","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/app/id6808717551","description":"A local audio player for iPhone and iPad that imports only the files and folders you choose."}
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Open Music Player","operatingSystem":"iOS 17, iPadOS 17","applicationCategory":"MusicApplication","softwareVersion":"1.2.0","offers":{"@type":"Offer","price":"0.99","priceCurrency":"USD"},"downloadUrl":"https://apps.apple.com/app/id6808717551","publisher":{"@type":"Organization","name":"Performarc","url":"https://performarc.app"},"description":"A local audio player for iPhone and iPad that imports only the files and folders you choose."}
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="brand" href="./" aria-label="Open Music Player home"><img src="app-icon.png" alt=""><span>Open Music Player</span></a>
-      <nav aria-label="Main navigation"><a href="#features">Features</a><a href="press.html">Press kit</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
-    </header>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <main>
-      <div class="hero">
-        <div>
-          <div class="eyebrow">Version 1.2.0 · iPhone and iPad</div>
-          <h1>Your music.<br>Your folders.<br>No subscription.</h1>
-          <p class="lead">Open Music Player is a focused player for your own audio library. Add only the files and folders you choose — the app does not scan your entire device.</p>
-          <div class="actions">
-            <a class="button" href="https://apps.apple.com/app/id6808717551">View on the App Store</a>
-            <span class="price">$0.99 in the US · local prices vary<br>Requires iOS or iPadOS 17 or later</span>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Open Music Player home">
+        <img src="app-icon.png" alt="">
+        <span>Open Music Player</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="news/">News</a>
+        <a href="#languages">Languages</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <a class="header-cta" href="https://apps.apple.com/app/id6808717551">App Store <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> Local music, thoughtfully played</p>
+          <h1>Your music.<br><em>Your way.</em></h1>
+          <p class="hero-lead">A focused player for the audio library you already own. Choose exactly which files and folders to add — no subscription, no required account, no full-device scan.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://apps.apple.com/app/id6808717551">
+              <span><small>Download on the</small>App Store</span>
+            </a>
+            <a class="text-link" href="#news">See what’s new <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Product details">
+            <span><strong>$0.99</strong> one-time purchase</span>
+            <span><strong>9</strong> interface languages</span>
+            <span><strong>iOS 17+</strong> iPhone &amp; iPad</span>
           </div>
         </div>
-        <aside class="hero-card" aria-label="App highlights">
-          <img class="app-icon" src="app-icon.png" alt="Open Music Player app icon">
-          <ul class="facts">
-            <li>Selected files and folders</li>
-            <li>Playlists, queue and smart collections</li>
-            <li>Equalizer, sleep timer and Lock Screen controls</li>
-            <li>Song identification from the microphone or a file</li>
-          </ul>
-        </aside>
+
+        <div class="hero-art" aria-label="Open Music Player visual preview">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-card">
+            <img class="art-icon" src="app-icon.png" alt="Open Music Player app icon">
+            <div class="visualizer" aria-hidden="true">
+              <i style="--h: 34%"></i><i style="--h: 68%"></i><i style="--h: 45%"></i><i style="--h: 86%"></i><i style="--h: 58%"></i><i style="--h: 72%"></i><i style="--h: 40%"></i><i style="--h: 64%"></i><i style="--h: 28%"></i>
+            </div>
+            <div class="now-playing">
+              <div>
+                <small>Your collection</small>
+                <strong>Local audio, ready to play</strong>
+              </div>
+              <span class="play-control" aria-hidden="true">▶</span>
+            </div>
+          </div>
+          <div class="floating-pill pill-left">No ads</div>
+          <div class="floating-pill pill-right">Selected folders only</div>
+        </div>
       </div>
+    </section>
 
-      <div class="trust" aria-label="Purchase and account information">
-        <div>No ads</div><div>No required account</div><div>One-time purchase</div>
+    <section class="proof">
+      <div class="shell proof-grid">
+        <div><span>01</span><strong>You choose the library</strong><p>Add individual files or only the folders you want.</p></div>
+        <div><span>02</span><strong>Your music stays yours</strong><p>Built for local playback without a mandatory account.</p></div>
+        <div><span>03</span><strong>One clear purchase</strong><p>No advertising and no recurring subscription.</p></div>
       </div>
+    </section>
 
-      <section id="features">
-        <div class="section-copy">
-          <h2>Built around the library you already own.</h2>
-          <p>Bring your own audio files. Open Music Player keeps the core experience focused on local playback while giving you the controls expected from a full music library.</p>
+    <section class="section features" id="features">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="kicker">Made for personal libraries</p><h2>Everything around<br>the music you own.</h2></div>
+          <p>From a carefully selected folder to a full listening routine, Open Music Player keeps control close and clutter out of the way.</p>
         </div>
-        <div class="grid">
-          <article class="feature"><span>Control</span><h3>Choose what gets added</h3><p>Import individual audio files or selected folders, then refresh a connected folder when its contents change.</p></article>
-          <article class="feature"><span>Library</span><h3>Organize without a catalog</h3><p>Browse songs, albums and artists, build playlists, and use smart collections based on your own listening.</p></article>
-          <article class="feature"><span>Playback</span><h3>Keep listening anywhere</h3><p>Manage the queue, shuffle and repeat, use the equalizer or sleep timer, and control playback from the Lock Screen.</p></article>
-          <article class="feature"><span>Identification</span><h3>Recognize a song</h3><p>Identify nearby music through the microphone or analyze a selected audio file. Identification requires an internet connection.</p></article>
-        </div>
-      </section>
 
-      <section>
-        <div class="note">
-          <div><h2>Nine interface languages.</h2><p>English, Russian, Bulgarian, Spanish, German, Italian, French, Japanese and Simplified Chinese. The app follows a supported device language automatically, with manual selection available in Settings.</p></div>
-          <a class="button" href="https://apps.apple.com/app/id6808717551">Get Open Music Player</a>
-        </div>
-      </section>
-    </main>
+        <div class="bento-grid">
+          <article class="bento bento-large">
+            <span class="feature-number">01</span>
+            <div>
+              <p class="eyebrow">Library control</p>
+              <h3>Add only what you choose.</h3>
+              <p>Import individual audio files or connect a folder. Refresh it when the contents change, or clear the catalog without deleting the original music.</p>
+            </div>
+            <div class="folder-visual" aria-hidden="true"><span></span><strong>Selected folder</strong><small>12 tracks · Connected</small></div>
+          </article>
 
-    <footer>
-      <span>© 2026 Performarc · Open Music Player</span>
-      <div><a href="press.html">Press kit</a><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="mailto:support-openmusic@performarc.app">Email support</a></div>
-    </footer>
-  </div>
+          <article class="bento">
+            <span class="feature-number">02</span>
+            <p class="eyebrow">Playback</p>
+            <h3>Built to keep playing.</h3>
+            <p>Queue, shuffle, repeat, sleep timer, equalizer and Lock Screen controls stay within reach.</p>
+            <div class="progress-visual" aria-hidden="true"><span></span></div>
+          </article>
+
+          <article class="bento bento-accent">
+            <span class="feature-number">03</span>
+            <p class="eyebrow">Recognition</p>
+            <h3>Find the song you hear.</h3>
+            <p>Identify nearby music through the microphone or analyze a selected audio file.</p>
+            <div class="recognize-disc" aria-hidden="true">♪</div>
+          </article>
+
+          <article class="bento bento-wide">
+            <span class="feature-number">04</span>
+            <div>
+              <p class="eyebrow">Version 1.2</p>
+              <h3>Playlists, smart collections and listening tools.</h3>
+            </div>
+            <ul>
+              <li>ReplayGain</li><li>Gapless playback</li><li>Crossfade</li><li>Lyrics &amp; LRC</li><li>Bookmarks</li><li>Long-audio resume</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="news">
+      <div class="shell">
+        <div class="section-heading news-heading">
+          <div><p class="kicker">Product journal</p><h2>What’s new.</h2></div>
+          <p>A clear, chronological record of the first release and every meaningful update.</p>
+        </div>
+
+        <div class="news-grid">
+          <article class="news-card news-featured">
+            <div class="news-topline"><time datetime="2026-09-15">September 15, 2026</time><span>Latest</span></div>
+            <p class="version">Version 1.2.0</p>
+            <h3>A bigger library experience, in nine languages.</h3>
+            <p>Custom playlists, smart collections, ReplayGain, gapless playback, crossfade, lyrics, bookmarks, transfer tools and optional diagnostics arrive in the first major update.</p>
+            <a href="news/version-1-2.html" aria-label="Read the Version 1.2.0 announcement">Read the update <span aria-hidden="true">↗</span></a>
+            <div class="release-mark" aria-hidden="true">1.2</div>
+          </article>
+
+          <div class="news-rail">
+            <article class="news-card launch-card">
+              <div class="news-topline"><time datetime="2026-09-09">September 9, 2026</time><span>Launch</span></div>
+              <p class="version">Version 1.1.0</p>
+              <h3>Open Music Player arrives on the App Store.</h3>
+              <p>The first public release puts selected files and folders, local playback and music recognition into one focused player.</p>
+              <a href="news/launch.html" aria-label="Read the launch announcement">Read the launch story <span aria-hidden="true">↗</span></a>
+            </article>
+
+            <div class="minor-release">
+              <div><time datetime="2026-09-11">September 11</time><strong>Version 1.1.1</strong></div>
+              <p>Playback, Russian titles, Lock Screen information and queue stability improved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section languages" id="languages">
+      <div class="shell languages-panel">
+        <div>
+          <p class="kicker">Feels at home</p>
+          <h2>Nine languages.<br>One music library.</h2>
+          <p>Open Music Player follows a supported device language automatically, with manual selection available whenever you need it.</p>
+        </div>
+        <div class="language-cloud" aria-label="Supported languages">
+          <span>English</span><span>Русский</span><span>Български</span><span>Español</span><span>Deutsch</span><span>Italiano</span><span>Français</span><span>日本語</span><span>简体中文</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="support">
+      <div class="shell final-card">
+        <div>
+          <p class="kicker">Your library is waiting</p>
+          <h2>Press play on<br>your own collection.</h2>
+        </div>
+        <div class="final-copy">
+          <p>Open Music Player is available for iPhone and iPad as a one-time purchase.</p>
+          <a class="button button-primary" href="https://apps.apple.com/app/id6808717551">View on the App Store <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <a class="brand footer-brand" href="#top"><img src="app-icon.png" alt=""><span>Open Music Player</span></a>
+      <p>Local music for iPhone and iPad.<br>Made by Performarc.</p>
+      <div class="footer-links"><a href="news/">News</a><a href="press.html">Press kit</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></div>
+      <small>© 2026 Performarc</small>
+    </div>
+  </footer>
 </body>
 </html>
