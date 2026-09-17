@@ -58,7 +58,7 @@ for (const file of collectHtml(root)) {
 for (const required of [
   "index.html", "support.html", "support-ru.html", "privacy.html",
   "privacy-ru.html", "press.html", "news/index.html", "news/launch.html",
-  "news/version-1-2.html", "404.html", "robots.txt", "sitemap.xml",
+  "news/version-1-2.html", "news/now-free.html", "404.html", "robots.txt", "sitemap.xml",
 ]) {
   if (!existsSync(join(root, required))) errors.push(`missing required file ${required}`);
 }
