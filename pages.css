@@ -31,6 +31,7 @@
   line-height: .92;
   letter-spacing: -.067em;
   overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .page-intro > p:not(.kicker) {
@@ -62,6 +63,50 @@
   font-weight: 720;
   text-decoration: none;
 }
+
+/* Language links must remain visible when the main navigation is hidden. */
+.page-intro .page-languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px 12px;
+  margin-top: 28px;
+}
+
+.page-languages a {
+  min-height: 44px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.page-languages a[aria-current="page"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(91, 241, 173, .08);
+}
+
+.page-intro > p.page-release-note { margin-top: 24px; }
+.page-release-note a { color: var(--accent); text-underline-offset: 3px; }
+.page-languages a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.page-meta span { padding-block: 8px; }
+.article a, .contact-panel, .article-aside { overflow-wrap: anywhere; }
+
+html:lang(ja) .page-intro h1,
+html:lang(zh) .page-intro h1 {
+  line-height: 1.25;
+  letter-spacing: -.025em;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+html:lang(ja) .article h2,
+html:lang(zh) .article h2 { line-height: 1.4; letter-spacing: normal; }
+html:lang(ja) .article p, html:lang(ja) .article li,
+html:lang(zh) .article p, html:lang(zh) .article li { line-height: 1.9; }
 
 .article-layout {
   display: grid;
@@ -271,4 +316,8 @@
   .release-hero { min-height: 450px; padding: 30px 25px; border-radius: 25px; }
   .facts-grid, .asset-grid { grid-template-columns: 1fr; }
   .article p, .article li { font-size: .97rem; }
+}
+
+@media (max-width: 380px) {
+  .page-intro h1 { font-size: 2.4rem; line-height: 1.05; }
 }
