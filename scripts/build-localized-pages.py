@@ -75,7 +75,7 @@ def render(lang, data, kind):
 <div class="page-intro"><p class="kicker">{e(ui[kind])}</p><h1>{e(page['title'])}</h1><p>{e(page['intro'])}</p>{intro_extra}</div>
 <div class="article-layout"><article class="article">{sections}</article><aside class="article-aside" aria-label="{e(ui['toc'])}"><strong>{e(ui['toc'])}</strong>{aside}</aside></div>
 </div></main>
-<footer><div class="shell footer-inner"><a class="brand footer-brand" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a><p>{e(ui['tagline'])}<br>{e(ui['by'])}</p><div class="footer-links"><a href="{news}">{e(ui['news'])}</a><a href="{other_file}">{e(ui[other_kind])}</a><a href="mailto:support-openmusic@performarc.app">{e(ui['email'])}</a></div><small>© 2026 Performarc</small></div></footer>
+<footer><div class="shell footer-inner"><a class="brand footer-brand" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a><p>{e(ui['tagline'])}<br>{e(ui['by'])}</p><div class="footer-links"><a href="{news}">{e(ui['news'])}</a><a href="{other_file}">{e(ui[other_kind])}</a><a href="mailto:support-openmusic@performarc.app">{e(ui['email'])}</a></div><div class="footer-social"><a href="https://www.pinterest.com/openmusicplayer/" rel="me noopener" target="_blank">Pinterest</a><a href="https://bsky.app/profile/openmusicplayer.bsky.social" rel="me noopener" target="_blank">Bluesky</a><a href="https://mastodon.social/@openmusicplayer" rel="me noopener" target="_blank">Mastodon</a></div><small>© 2026 Performarc</small></div></footer>
 </body>
 </html>
 '''

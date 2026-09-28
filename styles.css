@@ -174,13 +174,16 @@ h2 { margin: 15px 0 0; font-size: clamp(2.8rem, 5vw, 5.15rem); line-height: .95;
 .final-card .button-primary:hover { background: #173b2b; }
 
 footer { padding: 60px 0 72px; }
-.footer-inner { display: grid; grid-template-columns: 1.2fr 1fr 1fr auto; gap: 36px; align-items: start; padding-top: 34px; border-top: 1px solid var(--line); color: var(--muted); }
+.footer-inner { display: grid; grid-template-columns: 1.35fr 1fr 1fr .85fr auto; gap: 36px; align-items: start; padding-top: 34px; border-top: 1px solid var(--line); color: var(--muted); }
 .footer-brand { color: var(--ink); }
 .footer-inner p { margin: 0; font-size: .9rem; line-height: 1.6; }
 .footer-links { display: grid; gap: 11px; }
 .footer-links a { width: fit-content; color: #d2e1da; font-size: .9rem; text-decoration: none; }
 .footer-links a:hover { color: var(--accent); }
 .footer-inner small { justify-self: end; }
+.footer-social { display: grid; gap: 11px; }
+.footer-social a { width: fit-content; color: #d2e1da; font-size: .9rem; text-decoration: none; }
+.footer-social a:hover { color: var(--accent); }
 
 @media (max-width: 960px) {
   .header-inner { grid-template-columns: 1fr auto; }
