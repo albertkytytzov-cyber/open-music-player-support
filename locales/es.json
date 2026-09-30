@@ -5,7 +5,7 @@
     "description":"Ayuda, solución de problemas y contacto de Open Music Player.",
     "intro":"Respuestas sobre cómo añadir archivos, gestionar la biblioteca, reproducir e identificar canciones. Open Music Player es compatible con iPhone y iPad con iOS o iPadOS 17 o posterior.",
     "availability":"Consulta la versión disponible para tu dispositivo en el <a href=\"https://apps.apple.com/app/id6808717551\">App Store</a>.",
-    "notes":"Las <a href=\"{news}\">notas de la versión 1.2.2</a> explican las mejoras del ecualizador, la navegación, los diálogos con teclado y la recuperación de la reproducción.",
+    "notes":"<a href=\"{news}\">Novedades de la versión 1.2.3</a>: reproductor de vinilo, dos temas y transferencia de archivos.",
     "sections":[
       {"heading":"Añadir música", "html":"<p>Abre <strong>Ajustes</strong> y elige <strong>Añadir archivos</strong> o <strong>Añadir carpeta</strong>. Open Music Player solo indexa los archivos y las carpetas que seleccionas expresamente; no examina todo el dispositivo.</p><p>Si cambia el contenido de una carpeta conectada, usa su opción de actualización. Desconectar una carpeta elimina sus entradas de la aplicación sin borrar el audio original.</p>"},
       {"heading":"Vaciar la biblioteca de forma segura", "html":"<p>En <strong>Ajustes</strong>, selecciona <strong>Vaciar biblioteca</strong> y confirma. Se eliminan el catálogo de la aplicación, las carátulas asociadas en caché y las referencias a pistas locales. Los archivos de audio originales permanecen donde los guardaste.</p>"},

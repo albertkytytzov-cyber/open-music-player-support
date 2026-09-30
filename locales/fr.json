@@ -5,7 +5,7 @@
     "description":"Aide, dépannage et coordonnées de l’assistance Open Music Player.",
     "intro":"Des réponses pour ajouter des fichiers, gérer votre bibliothèque, écouter et reconnaître des morceaux. Open Music Player prend en charge l’iPhone et l’iPad sous iOS ou iPadOS 17 ou version ultérieure.",
     "availability":"Consultez la version disponible pour votre appareil dans l’<a href=\"https://apps.apple.com/app/id6808717551\">App Store</a>.",
-    "notes":"Les <a href=\"{news}\">notes de la version 1.2.2</a> présentent les améliorations de l’égaliseur, de la navigation, des boîtes de dialogue avec le clavier et de la reprise de lecture.",
+    "notes":"<a href=\"{news}\">Notes de version 1.2.3</a> : lecteur vinyle, deux thèmes et partage de fichiers.",
     "sections":[
       {"heading":"Ajouter de la musique", "html":"<p>Ouvrez <strong>Réglages</strong>, puis choisissez <strong>Ajouter des fichiers</strong> ou <strong>Ajouter un dossier</strong>. Open Music Player indexe uniquement les fichiers et dossiers que vous sélectionnez explicitement ; il n’analyse pas tout l’appareil.</p><p>Si le contenu d’un dossier connecté change, utilisez son action d’actualisation. Déconnecter un dossier retire ses entrées de l’application sans supprimer les fichiers audio d’origine.</p>"},
       {"heading":"Vider la bibliothèque en toute sécurité", "html":"<p>Dans <strong>Réglages</strong>, sélectionnez <strong>Vider la bibliothèque</strong> et confirmez. Cette action efface le catalogue de l’application, les pochettes associées en cache et les références aux morceaux locaux. Vos fichiers audio d’origine restent à leur emplacement.</p>"},

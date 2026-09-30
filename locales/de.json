@@ -5,7 +5,7 @@
     "description":"Hilfe, Fehlerbehebung und Kontakt zum Support von Open Music Player.",
     "intro":"Antworten zum Hinzufügen von Dateien, zur Mediathek, zur Wiedergabe und zur Musikerkennung. Open Music Player unterstützt iPhone und iPad ab iOS bzw. iPadOS 17.",
     "availability":"Die für Ihr Gerät verfügbare Version finden Sie im <a href=\"https://apps.apple.com/app/id6808717551\">App Store</a>.",
-    "notes":"Die <a href=\"{news}\">Versionshinweise zu 1.2.2</a> beschreiben die Verbesserungen am Equalizer, an der Navigation, an Dialogen mit Tastatur und an der Wiederherstellung der Wiedergabe.",
+    "notes":"<a href=\"{news}\">Versionshinweise zu 1.2.3</a>: Vinyl-Player, zwei Designs und Dateifreigabe.",
     "sections":[
       {"heading":"Musik hinzufügen", "html":"<p>Öffnen Sie <strong>Einstellungen</strong> und wählen Sie <strong>Dateien hinzufügen</strong> oder <strong>Ordner hinzufügen</strong>. Open Music Player erfasst nur die ausdrücklich ausgewählten Dateien und Ordner und durchsucht nicht das gesamte Gerät.</p><p>Wenn sich der Inhalt eines verbundenen Ordners ändert, aktualisieren Sie ihn in der App. Beim Trennen eines Ordners werden seine Einträge aus der App entfernt; die ursprünglichen Audiodateien bleiben erhalten.</p>"},
       {"heading":"Mediathek sicher leeren", "html":"<p>Wählen Sie unter <strong>Einstellungen</strong> die Option <strong>Mediathek leeren</strong> und bestätigen Sie den Vorgang. Der App-Katalog, zugehörige zwischengespeicherte Cover und Verweise auf lokale Titel werden entfernt. Ihre ursprünglichen Audiodateien bleiben an ihrem Speicherort.</p>"},

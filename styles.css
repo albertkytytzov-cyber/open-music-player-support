@@ -247,3 +247,8 @@ footer { padding: 60px 0 72px; }
   .orbit-two { animation: none; }
   .button-primary { transition: none; }
 }
+
+/* A real, user-controlled preview; no automatic motion or video download. */
+.hero-demo { margin:0; text-align:center; justify-self:center; width:min(100%,300px); }
+.hero-demo video { display:block; width:100%; height:auto; aspect-ratio:884/1920; background:#101612; border-radius:32px; box-shadow:0 20px 70px #15352b22; }
+.hero-demo figcaption { margin-top:16px; font-size:13px; line-height:1.6; color:var(--muted,#53695e); }

@@ -33,7 +33,7 @@ def switcher(kind, current, label):
 def render(lang, data, kind):
     ui, page = data["ui"], data[kind]
     support, privacy = filename("support", lang), filename("privacy", lang)
-    news = "news/" + filename("version-1-2-2", lang)
+    news = "news/" + filename("version-1-2-3", lang)
     def content(text):
         for key, value in {"privacy": privacy, "support": support, "news": news, "email": "support-openmusic@performarc.app"}.items():
             text = text.replace("{" + key + "}", value)
@@ -70,7 +70,7 @@ def render(lang, data, kind):
 </head>
 <body class="page-body">
 <a class="skip-link" href="#main">{e(ui['skip'])}</a>
-<header class="page-header"><div class="shell header-inner"><a class="brand page-nav-home" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a><nav aria-label="{e(ui['navigation'])}"><a href="./#features">{e(ui['features'])}</a><a href="{news}">{e(ui['news'])}</a><a href="{other_file}">{e(ui[other_kind])}</a></nav><a class="header-cta" href="https://apps.apple.com/app/id6808717551">App Store <span aria-hidden="true">↗</span></a></div></header>
+<header class="page-header"><div class="shell header-inner"><a class="brand page-nav-home" href="./"><img src="app-icon.png" alt=""><span>Open Music Player</span></a><nav aria-label="{e(ui['navigation'])}"><a href="./#features">{e(ui['features'])}</a><a href="{news}">{e(ui['news'])}</a><a href="{other_file}">{e(ui[other_kind])}</a></nav><a class="header-cta" href="https://apps.apple.com/app/apple-store/id6808717551?pt=128990063&amp;ct=om_website_20260930&amp;mt=8">App Store <span aria-hidden="true">↗</span></a></div></header>
 <main class="page-main" id="main"><div class="shell">
 <div class="page-intro"><p class="kicker">{e(ui[kind])}</p><h1>{e(page['title'])}</h1><p>{e(page['intro'])}</p>{intro_extra}</div>
 <div class="article-layout"><article class="article">{sections}</article><aside class="article-aside" aria-label="{e(ui['toc'])}"><strong>{e(ui['toc'])}</strong>{aside}</aside></div>
